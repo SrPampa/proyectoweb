@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="css/mystyle.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="img/imgHead.jpg" alt="Imagen de cabecera"/>
+        </header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item fs-3 fw-bold px-5">
+                    <a href="indexServlet" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item fs-3 fw-bold px-5">
+                    <a href="formulario" class="nav-link active">Formularios</a>
+                </li>
+                <li class="nav-item fs-3 fw-bold px-5">
+                    <a href="listado" class="nav-link ">Listado</a>
+                </li>
+            </ul>
+          </nav>
+        <main>
+            <h1 class="ps-3 pt-3">La fecha de hoy es: <span th:text="${today}"></span></h1>
+
+            <h3 class="ps-3 pt-3" th:text="#{formularios.textoformulario}">Debe rellenar:</h3>
+
+
+            <div class="container px-5">
+
+                <form action="formulario" method="POST">
+                    <div class="mb-3">
+                        <label for="name" class="form-label"><span th:text="#{formularios.prodnombre}">Nombre: </span></label>
+                        <input type="text" class="form-control" name="name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="precio" class="form-label"><span th:text="#{formularios.prodprecio}">Precio: </span></label>
+                        <input type="text" class="form-control" name="precio">
+                    </div>
+                    <div class="mb-3">
+                        <label for="tipo" class="form-label">
+                            <span th:text="#{formularios.prodtipo}">Tipo: </span>
+                        </label>
+                        <select name="tipo" class="form-select" multiple>
+                            <option value="1" th:text="#{formularios.prodtipo1}">Tipo1</option>
+                            <option value="2" th:text="#{formularios.prodtipo2}">Tipo2</option>
+                            <option value="3" th:text="#{formularios.prodtipo3}">Tipo3</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3 form-check">
+                        <fieldset>
+                            <legend th:text="#{formularios.prodduracion}">Duración</legend>
+                            <input type="radio" class="form-check-input" id="per" name="duracion" value="per"/>
+                            <label class="form-check-label" for="per"><span th:text="#{formularios.prodperecedero}">Perecedero</span></label>
+                            <br/>
+                            <input type="radio" class="form-check-input" id="nper" name="duracion" value="nper" checked="checked"/>
+                            <label class="form-check-label" for="nper"><span th:text="#{formularios.prodnoperecedero}">No perecedero</span></label>
+                            <br />
+                        </fieldset>
+                    </div>
+                    <div class="mb-3 text-center">
+                        <input type="reset" class="btn btn-primary" value="Borrar" th:attr="value=#{formularios.reset}"></input>
+                        <input type="submit" class="btn btn-primary" value="Enviar" th:attr="value=#{formularios.submit}"></input>
+                    </div>
+                  </form>
+            </div>
+
+        </main>
+        <footer>
+            <h1>
+                <span th:text="#{formularios.welcome}"></span>
+                <span th:text="#{formularios.author}"></span>
+            </h1>
+        </footer>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

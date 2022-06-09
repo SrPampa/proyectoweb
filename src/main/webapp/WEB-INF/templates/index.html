@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicial</title>
+    <link rel="stylesheet" href="css/mystyle.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="img/imgHead.jpg" alt="Imagen de cabecera"/>
+        </header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item fs-3 fw-bold px-5">
+                    <a href="indexServlet" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item fs-3 fw-bold px-5">
+                    <a href="formulario" class="nav-link ">Formularios</a>
+                </li>
+                <li class="nav-item fs-3 fw-bold px-5">
+                    <a href="listado" class="nav-link ">Listado</a>
+                </li>
+            </ul>
+          </nav>
+
+        <main class="text-center">
+                <!--Para poder cambiar la url desde una configuración
+                con el resolver de Thymeleaf:
+            <img src="img/logos.jpg" th:src="@{/img/logo.png}" th:title="#{logo}" th:alt="#{logo}" />
+            
+            daría como resultado:
+            <img src="/tema8_web/img/logo.png" alt="logos" />
+            -->
+            <img src="img/logos.png" alt="logos" />
+        </main>
+        <footer>
+            <h1>
+                <span th:text="#{index.welcome}"></span>
+                <span th:text="#{index.author}"></span>
+            </h1>
+        </footer>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
