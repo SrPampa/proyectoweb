@@ -37,7 +37,7 @@ private static final long serialVersionUID = 1L;
 		ctx.setVariable("cursos", allCursos);
 
 		TemplateEngine engine = configThymeleaf.getTemplateEngine();
-		engine.process("mostrar_alumnos", ctx, response.getWriter());
+		engine.process("mostrar_cursos", ctx, response.getWriter());
 	}
 
 }

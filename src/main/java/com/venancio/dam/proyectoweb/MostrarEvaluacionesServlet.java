@@ -34,9 +34,9 @@ private static final long serialVersionUID = 1L;
 		Service service = new Service();
 		Set<Evaluacion> allNotas = service.mostrarNotas();
 
-		ctx.setVariable("alumnos", allNotas);
+		ctx.setVariable("evaluaciones", allNotas);
 
 		TemplateEngine engine = configThymeleaf.getTemplateEngine();
-		engine.process("mostrar_alumnos", ctx, response.getWriter());
+		engine.process("mostrar_evaluaciones", ctx, response.getWriter());
 	}
 }
