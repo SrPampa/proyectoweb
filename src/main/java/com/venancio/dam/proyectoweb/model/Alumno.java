@@ -10,8 +10,12 @@ public class Alumno {
 	private String apellidos;
 	private String telefono;
 	private Date fechaNacimiento;
-	
-	public Alumno(int codigoAlumno, String nombre, String apellidos, String telefono, Date fechaNacimiento) {
+
+	public Alumno(long codigoAlumno) {
+		this.codigoAlumno = codigoAlumno;
+	}
+
+	public Alumno(long codigoAlumno, String nombre, String apellidos, String telefono, Date fechaNacimiento) {
 		this.codigoAlumno = codigoAlumno;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
@@ -23,7 +27,7 @@ public class Alumno {
 		return codigoAlumno;
 	}
 
-	public void setCodigoAlumno(int codigoAlumno) {
+	public void setCodigoAlumno(long codigoAlumno) {
 		this.codigoAlumno = codigoAlumno;
 	}
 
@@ -83,6 +87,5 @@ public class Alumno {
 		return "Alumno [codigoAlumno=" + codigoAlumno + ", nombre=" + nombre + ", apellidos=" + apellidos
 				+ ", telefono=" + telefono + ", fechaNacimiento=" + fechaNacimiento + "]";
 	}
-	
-	
+
 }
