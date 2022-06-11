@@ -30,6 +30,14 @@
         <servlet-name>FormularioServlet</servlet-name>
         <url-pattern>/formulario</url-pattern>
     </servlet-mapping>
+     <servlet-mapping>
+        <servlet-name>MostrarAlumnosServlet</servlet-name>
+        <url-pattern>/mostrar_alumnos</url-pattern>
+    </servlet-mapping>
+     <servlet-mapping>
+        <servlet-name>MostrarCursosServlet</servlet-name>
+        <url-pattern>/mostrar_cursos</url-pattern>
+    </servlet-mapping>
 
 	
 	
