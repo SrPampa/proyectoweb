@@ -12,8 +12,8 @@ public abstract class FactoryDAO {
 	public abstract EvaluacionDAO getEvaluacionDAO();
 
 	public static FactoryDAO getFactoryDAO(int whichFactory) {
-		switch(whichFactory) {
-		case 1: 
+		switch (whichFactory) {
+		case 1:
 			return new SQLFactoryDAO();
 		case 2:
 			return new OracleFactoryDAO();

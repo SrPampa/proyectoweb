@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+import com.venancio.dam.proyectoweb.dao.FactoryDAO;
 import com.venancio.dam.proyectoweb.dao.SQLFactoryDAO;
 
 public class DBConnection {
@@ -29,6 +30,7 @@ public class DBConnection {
 	private DBConnection() {
 		System.out.println("Creando conexión con la BBDD...");
 		SQLFactoryDAO fdao = new SQLFactoryDAO();
+
 		try {
 			Class.forName(fdao.getDriver());
 		} catch (ClassNotFoundException e1) {
