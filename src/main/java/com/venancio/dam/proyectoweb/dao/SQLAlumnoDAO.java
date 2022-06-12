@@ -24,7 +24,7 @@ public class SQLAlumnoDAO implements AlumnoDAO {
 			ResultSet rs = stmt.executeQuery();
 			while (rs.next()) {
 				Alumno a = new Alumno(rs.getInt("CODIGOALUMNO"), rs.getString("NOMBRE"), rs.getString("APELLIDOS"),
-						rs.getString("TELEFONO"), rs.getDate("FECHANACIMIENTO"));
+						rs.getString("TELEFONO"), rs.getString("FECHANACIMIENTO"));
 				alumnos.add(a);
 			}
 		} catch (SQLException e) {
@@ -42,7 +42,7 @@ public class SQLAlumnoDAO implements AlumnoDAO {
 			stmt.setString(1, a.getNombre());
 			stmt.setString(2, a.getApellidos());
 			stmt.setString(3, a.getTelefono());
-			stmt.setDate(4, a.getFechaNacimiento());
+			stmt.setString(4, a.getFechaNacimiento());
 			add = stmt.execute();
 
 		} catch (SQLException e) {
@@ -59,7 +59,7 @@ public class SQLAlumnoDAO implements AlumnoDAO {
 			stmt.setString(1, a.getNombre());
 			stmt.setString(2, a.getApellidos());
 			stmt.setString(3, a.getTelefono());
-			stmt.setDate(4, a.getFechaNacimiento());
+			stmt.setString(4, a.getFechaNacimiento());
 			stmt.setInt(5, codigo);
 			rows = stmt.executeUpdate();
 
