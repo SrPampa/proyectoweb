@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="alumno.css"/>
+    <link rel="stylesheet" href="bootstrap.min.css"/>
+    <title>Document</title>
+</head>
+<body>
+ <table>
+          <tr>
+              <th>Nombre</th>
+              <th>Apellido</th>
+          </tr>
+
+          <tr th:each="Alumnos : ${Alumnos}">
+              <td th:text="${prod.Nombre}">Onions</td>
+              <td th:text="${prod.name}">Onions</td>
+              <td th:text="${prod.name}">Onions</td>
+          </tr>
+
+      <div id="resp-table">
+
+      <table class="tabla-alumnos">
+        <thead>    
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido1</th>
+                <th>Apellido2</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr th:each="Alumnos : ${Alumnos}">
+                <td th:text="${prod.Nombre}">Onions</td>
+                <td th:text="${prod.name}">Onions</td>
+                <td th:text="${prod.name}">Onions</td>
+                <td>
+                    <a class="opciones" href="index.html">
+                        : 
+                    </a>
+                </td>
+            </tr>
+
+            <tr>
+                <td scope="row">adsfadsfadsf</td>
+                <td>adsfadsf</td>
+                <td>adsfadsfadsf</td>
+                <td>
+                    <a class="opciones" href="index.html">:</a>
+                </td>
+            </tr>
+
+            <tr>
+                  <td scope="row">adsfadsfadsf</td>
+                  <td>adsfadsf</td>
+                  <td>adsfadsfadsf</td>
+                  <td>
+                      <a class="opciones" href="index.html">:</a>
+                  </td>
+              </tr>
+
+                <tr>
+                  <td scope="row">adsfadsfadsf</td>
+                  <td>adsfadsf</td>
+                  <td>adsfadsfadsf</td>
+                  <td>
+                      <a class="opciones" href="index.html">:</a>
+                  </td>
+              </tr>
+
+              <tr>
+                <td scope="row">adsfadsfadsf</td>
+                <td>adsfadsf</td>
+                <td>adsfadsfadsf</td>
+                <td>
+                    <a class="opciones" href="index.html">:</a>
+                </td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
