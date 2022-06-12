@@ -9,13 +9,13 @@ public class Alumno {
 	private String nombre;
 	private String apellidos;
 	private String telefono;
-	private Date fechaNacimiento;
+	private String fechaNacimiento;
 
 	public Alumno(long codigoAlumno) {
 		this.codigoAlumno = codigoAlumno;
 	}
 
-	public Alumno(long codigoAlumno, String nombre, String apellidos, String telefono, Date fechaNacimiento) {
+	public Alumno(long codigoAlumno, String nombre, String apellidos, String telefono, String fechaNacimiento) {
 		this.codigoAlumno = codigoAlumno;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
@@ -55,11 +55,11 @@ public class Alumno {
 		this.telefono = telefono;
 	}
 
-	public Date getFechaNacimiento() {
+	public String getFechaNacimiento() {
 		return fechaNacimiento;
 	}
 
-	public void setFechaNacimiento(Date fechaNacimiento) {
+	public void setFechaNacimiento(String fechaNacimiento) {
 		this.fechaNacimiento = fechaNacimiento;
 	}
 

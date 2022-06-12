@@ -11,4 +11,6 @@ public interface AlumnoDAO {
 	public boolean addAlumno(Alumno a);
 
 	public int modificarAlumno(Alumno a, int codigo);
+
+	public boolean deleteAlumno(int cod);
 }

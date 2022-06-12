@@ -2,12 +2,13 @@ package com.venancio.dam.proyectoweb.repository;
 
 import java.util.Set;
 
-import com.venancio.dam.proyectoweb.dao.SQLEvaluacionDAO;
+import com.venancio.dam.proyectoweb.dao.EvaluacionDAO;
+import com.venancio.dam.proyectoweb.dao.FactoryDAO;
 import com.venancio.dam.proyectoweb.model.Evaluacion;
 
 public class EvaluacionRepository {
 
-	private SQLEvaluacionDAO dao;
+	private EvaluacionDAO dao;
 
 	private static EvaluacionRepository instance;
 
@@ -19,7 +20,7 @@ public class EvaluacionRepository {
 	}
 
 	public EvaluacionRepository() {
-		this.dao = new SQLEvaluacionDAO();
+		this.dao = FactoryDAO.getFactoryDAO(FactoryDAO.SQL).getEvaluacionDAO();
 	}
 
 	public Set<Evaluacion> mostrarNotas() {
