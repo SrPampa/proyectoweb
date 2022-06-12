@@ -103,5 +103,9 @@ text-align: right;
   }
   
   .dropdown:hover .dropbtn {
-    transform: rotate(90deg);
+    transform: rotate(180deg);
 }
+
+    .dropdown button img{
+        height: 0.8em;
+    }
