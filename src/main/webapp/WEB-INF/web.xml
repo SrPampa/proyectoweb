@@ -32,7 +32,7 @@
     </servlet-mapping>
      <servlet-mapping>
         <servlet-name>MostrarAlumnosServlet</servlet-name>
-        <url-pattern>/mostrar_alumnos</url-pattern>
+        <url-pattern>/alumnos</url-pattern>
     </servlet-mapping>
      <servlet-mapping>
         <servlet-name>MostrarCursosServlet</servlet-name>
@@ -44,7 +44,7 @@
     </servlet-mapping>
      <servlet-mapping>
         <servlet-name>InsertAlumnosServlet</servlet-name>
-        <url-pattern>/insert_alumnos</url-pattern>
+        <url-pattern>/apuntate</url-pattern>
     </servlet-mapping>
      <servlet-mapping>
         <servlet-name>UpdateAlumnosServlet</servlet-name>
