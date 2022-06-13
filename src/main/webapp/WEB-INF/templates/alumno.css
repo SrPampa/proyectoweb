@@ -1,23 +1,37 @@
+body{
+  background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
 .tabla-alumnos{
     border-collapse: separate;
     border-spacing: 0 15px;
     margin-left:5% ;
     margin-right: 5%;
-    padding: 3em;
     font-size: 0.9em;
     font-family: sans-serif;
     min-width: 90%;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    background-color: rgb(81, 81, 80);
+    border-radius: 10px;
+    
 }
 
 .tabla-alumnos thead{
-    background-color: #009879;
+    background-color: #70b5a7;
     color: #ffffff;
     text-align: center;
     border-radius: 5px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
+
+.tabla-alumnos thead tr{
+  height: 5em;
+  font-weight: bolder;
+  border-radius: 5px;
+}
+
+
+
 
 .tabla-alumnos th,
 .tabla-alumnos td {
@@ -25,20 +39,21 @@
     text-align: center;
 }
 
-.tabla-alumnos tbody tr {
-    border-radius: 5px;
+.tabla-alumnos tbody {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     background-color: white;
+    border-radius: 1em;
+  }
 
+.tabla-alumnos tbody tr {
+  border-radius: 5px;
 }
 
-.tabla-alumnos tbody  tr td:last-of-type {
-text-align: right;
 
-}
+
 
 .tabla-alumnos tbody tr:hover {
-    background-color: #d1ecd1;
+  color: #898989;
 }
 
 
@@ -109,3 +124,5 @@ text-align: right;
     .dropdown button img{
         height: 0.8em;
     }
+
+    
