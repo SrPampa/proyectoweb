@@ -2,12 +2,13 @@ package com.venancio.dam.proyectoweb.repository;
 
 import java.util.Set;
 
-import com.venancio.dam.proyectoweb.dao.SQLAlumnoDAO;
+import com.venancio.dam.proyectoweb.dao.AlumnoDAO;
+import com.venancio.dam.proyectoweb.dao.FactoryDAO;
 import com.venancio.dam.proyectoweb.model.Alumno;
 
 public class AlumnoRepository {
 
-	private SQLAlumnoDAO dao;
+	private AlumnoDAO dao;
 	
 	private static AlumnoRepository instance;
 	
@@ -19,7 +20,7 @@ public class AlumnoRepository {
 	}
 
 	public AlumnoRepository() {
-		this.dao = new SQLAlumnoDAO();
+		this.dao = FactoryDAO.getFactoryDAO(FactoryDAO.SQL).getAlumnoDAO();
 	}
 
 	public Set<Alumno> getAlumnos() {
@@ -27,7 +28,6 @@ public class AlumnoRepository {
 	}
 
 	public boolean addAlumno(Alumno a) {
-		// TODO Auto-generated method stub
 		return this.dao.addAlumno(a);
 	}
 

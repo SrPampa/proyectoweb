@@ -6,13 +6,8 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.sql.DriverManager;
-import java.sql.SQLException;
 
-import com.venancio.dam.proyectoweb.utils.DBConnection;
-
-public class SQLFactoryDAO extends FactoryDAO {
-
+public class OracleFactoryDAO extends FactoryDAO {
 
 	private final String RUTA = "Ficheros/";
 	private final String DELIMITER = "@";
@@ -27,7 +22,7 @@ public class SQLFactoryDAO extends FactoryDAO {
 	private String CADENA_CONEXION = URL + IP + PORT + BDNAME;
 
 	public void fillConfig() {
-		Path file = Paths.get(RUTA, "conexion.txt");
+		Path file = Paths.get(RUTA, "conexionOracle.txt");
 		try (BufferedReader br = Files.newBufferedReader(file, StandardCharsets.UTF_8)) {
 			String line = null;
 			while (br.readLine() != null) {
@@ -64,16 +59,19 @@ public class SQLFactoryDAO extends FactoryDAO {
 	public String getDriver() {
 		return DRIVER;
 	}
-
-	public SQLAlumnoDAO getAlumnoDAO() {
-		return new SQLAlumnoDAO();
+	@Override
+	public AlumnoDAO getAlumnoDAO() {
+		return null;
 	}
 
-	public SQLCursoDAO getCursoDAO() {
-		return new SQLCursoDAO();
+	@Override
+	public CursoDAO getCursoDAO() {
+		return null;
 	}
 
-	public SQLEvaluacionDAO getEvaluacionDAO() {
-		return new SQLEvaluacionDAO();
+	@Override
+	public EvaluacionDAO getEvaluacionDAO() {
+		return null;
 	}
+
 }
