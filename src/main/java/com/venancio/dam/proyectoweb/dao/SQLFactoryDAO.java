@@ -18,15 +18,14 @@ public class SQLFactoryDAO extends FactoryDAO {
 	 */
 	private final String RUTA = "Ficheros/";
 	private final String DELIMITER = "@";
-	
-	private String CADENA_CONEXION = "jdbc:mysql://127.0.0.1:3307/ramirez";
-	private String DRIVER = "com.mysql.cj.jdbc.Driver";
+
+	private String DRIVER;
 	private String URL;
-	private String USER;
+
 	private String IP;
 	private String PORT;
 	private String BDNAME;
-	private String PASS;
+	private String CADENA_CONEXION = URL + IP + PORT + BDNAME;
 
 	public void fillConfig() {
 		Path file = Paths.get(RUTA, "conexion.txt");
@@ -48,12 +47,6 @@ public class SQLFactoryDAO extends FactoryDAO {
 				case "BDNAME":
 					this.BDNAME = aux[1];
 					break;
-				case "USER":
-					this.USER = aux[1];
-					break;
-				case "PASS":
-					this.PASS = aux[1];
-					break;
 				case "DRIVER":
 					this.DRIVER = aux[1];
 					break;
@@ -65,8 +58,8 @@ public class SQLFactoryDAO extends FactoryDAO {
 		}
 	}
 
-	public String getURL() {
-		return URL;
+	public String getCadenaConexion() {
+		return CADENA_CONEXION;
 	}
 
 	public String getDriver() {

@@ -30,7 +30,7 @@ public class DBConnection {
 	private DBConnection() {
 		System.out.println("Creando conexión con la BBDD...");
 		SQLFactoryDAO fdao = new SQLFactoryDAO();
-
+		fdao.fillConfig();
 		try {
 			Class.forName(fdao.getDriver());
 		} catch (ClassNotFoundException e1) {
@@ -38,7 +38,7 @@ public class DBConnection {
 		}
 
 		try {
-			this.conexion = DriverManager.getConnection(fdao.getURL(), USER, PASS);
+			this.conexion = DriverManager.getConnection(fdao.getCadenaConexion(), USER, PASS);
 			System.out.println("Conexión con la BBDD establecida con éxito!!");
 		} catch (SQLException e) {
 			System.err.println("Error al crear la conexión con la BBDD...");
