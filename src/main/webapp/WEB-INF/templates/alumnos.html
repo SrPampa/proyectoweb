@@ -9,51 +9,50 @@
     <title>Document</title>
 </head>
 <body>
-   
-    <nav>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-              <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html"><img src="R.png" style="height: 1em;"></a>
-                     <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="Cursos/Curso.html">Cursos <span class="visually-hidden">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="alumnos.html">Alumnos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Apuntate/apuntate.html">Formulario</a>
-                        </li>
-                    </ul>
-                 
-                </div>
-          </div>
-        </nav>
-   
+   <header>
+       
+           <nav>
+               <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                     <div class="container-fluid">
+                       <a class="navbar-brand" href="../index.html"><img src="R.png" style="height: 1em;"></a>
+                            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                               <li class="nav-item active">
+                                   <a class="nav-link" href="Cursos/Curso.html">Cursos <span class="visually-hidden">(current)</span></a>
+                               </li>
+                               <li class="nav-item">
+                                   <a class="nav-link" href="alumnos.html">Alumnos</a>
+                               </li>
+                               <li class="nav-item">
+                                   <a class="nav-link" href="Apuntate/apuntate.html">Formulario</a>
+                               </li>
+                           </ul>
+                        
+                       </div>
+                 </div>
+               </nav>
 
- <table>
-          <tr>
-              <th>Nombre</th>
-              <th>Apellido</th>
-          </tr>
+   </header>
 
-          <tr th:each="Alumnos : ${Alumnos}">
-              <td th:text="${prod.Nombre}">Onions</td>
-              <td th:text="${prod.name}">Onions</td>
-              <td th:text="${prod.name}">Onions</td>
-          </tr>
+   <div class="Nuestros">
+       <h1>Nuestros alumnos</h1>
+       <h4 style="margin-top:2em ;">"Aquí tienes un listado de nuestros alumnos y su información, para poder realizar más acciones sólo tendrás que poner el ratón sobre
+           el triángulo invertido que se encuentra en la parte derecha de las tablas, esperamos verte en esta lista pronto!"
+       </h4>
 
-      <div id="resp-table">
+   </div>
+
 </table>
 
       <table class="tabla-alumnos">
         <thead>    
             <tr>
-                <th>Nombre</th>
-                <th>Apellido1</th>
-                <th>Apellido2</th>
-                <th></th>
+                <th style="width: 32%;">Nombre</th>
+                <th style="width: 32%;">Apellido1</th>
+                <th style="width: 32%;">Apellido1</th>
+                <th style="width: 3%;"></th>
+
             </tr>
+
         </thead>
         <tbody>
 
@@ -150,8 +149,25 @@
       </table>
     </div>
 
-  
+    <div class="noEncontrar">
+        <div style="width: 80%;">
+            <h1 style="font-weight:bolder; text-align: left;">¿Estás Stalkeando a alguien en concreto?</h1>
+            <br>
+            <h5 style="color:  #009879 ; width: 80%; text-align: left; margin-bottom: 1em;">"No te procupes, sabemos que estás buscando a tu crush. Para encontrarlo tienes una función de búsqueda a tu derecha"
+            </h5>
+            <form action="">
+                <input type="text" id="buscar" placeholder="introduce un nombre">
+                <a name="" id="" class="btn btn-primary" href="#" role="button" style="background-color:#009879; border: none; text-align: center;">Encontrar!</a>
+            </form>
+        </div> 
 
+            <img src="imagenes/habitación.png" style="height: 70%; float: right; ">
+
+       
+
+    </div>
+
+   
 
 
 

@@ -1,37 +1,60 @@
 body{
-  background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+  background-image: url(green.jpg);
+  background-size: 150%;
   font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
 }
 
+header{
+  margin-bottom: 3em;
+}
+
+h1{
+  text-align: center;
+  color: #f9f9f9;
+  margin-top: 10%;
+  font-weight: bolder;
+}
+
+h4{
+  text-align: center;
+  color: #009879;
+}
+
+.Nuestros{
+  width: 60%;
+margin-left: 20%;
+margin-right: 20%;
+}
 
 .tabla-alumnos{
+  margin-top: 3em;
     border-collapse: separate;
-    border-spacing: 0 15px;
+    border-spacing: 0 5px;
     margin-left:5% ;
     margin-right: 5%;
     font-size: 0.9em;
     font-family: sans-serif;
     min-width: 90%;
-    border-radius: 10px;
     
 }
 
 .tabla-alumnos thead{
-    background-color: #70b5a7;
     color: #ffffff;
     text-align: center;
     border-radius: 5px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    background-color: #009879;
+
 }
 
 .tabla-alumnos thead tr{
-  height: 5em;
+  height: 4em;
   font-weight: bolder;
+  background-color: #595959;
   border-radius: 5px;
+  padding: 5px;
 }
-
-
-
 
 .tabla-alumnos th,
 .tabla-alumnos td {
@@ -48,24 +71,8 @@ body{
 .tabla-alumnos tbody tr {
   border-radius: 5px;
 }
-
-
-
-
 .tabla-alumnos tbody tr:hover {
   color: #898989;
-}
-
-
-.tabla-alumnos tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
-}
-
-.tabla-alumnos tbody tr.active-row {
-    font-weight: bold;
-    color: #009879;
-    border-radius: 5px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
 .tabla-alumnos tr td a{
@@ -125,4 +132,52 @@ body{
         height: 0.8em;
     }
 
-    
+.noEncontrar{
+  display: flex;
+  flex-direction: row;
+  margin-top: 2.5em;
+  margin-bottom: 3em;
+}
+
+.noEncontrar div{
+display: flex;
+flex-direction: column;
+align-items: baseline;
+padding: 4em;
+text-align: center;
+}
+
+.noEncontrar div form input{
+justify-self: right;
+width: 70%;
+padding: 0.7em;
+border-radius: 7px;
+
+}
+
+.noEncontrar div form label{
+  color: #009879;
+  font-size: large;
+  font-weight: bold;
+}
+
+form{
+  text-align: left;
+  width: 100%;
+}
+
+form a{
+height: 3em;
+text-align: center;
+}
+
+.image-container{
+  display: flex;
+  justify-content: right;
+  align-items: center;
+
+
+}
+
+
+
