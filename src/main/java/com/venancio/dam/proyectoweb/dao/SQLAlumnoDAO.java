@@ -12,7 +12,7 @@ import com.venancio.dam.proyectoweb.utils.DBConnection;
 public class SQLAlumnoDAO implements AlumnoDAO {
 
 	private static final String SELECT_ALUMNOS = "SELECT * FROM ALUMNOS";
-	private static final String INSERT_ALUMNO = "INSERT INTO ALUMNOS (SELECT MAX(CODIGOALUMNO)+1,?,?,?,?)";
+	private static final String INSERT_ALUMNO = "INSERT INTO ALUMNOS SELECT MAX(CODIGOALUMNO)+1,?,?,?,? FROM ALUMNOS";
 	private static final String UPDATE_ALUMNO = "UPDATE ALUMNOS SET NOMBRE=?, APELLIDOS=?, TELEFONO=?, FECHANACIMIENTO=? WHERE CODIGOALUMNO = ?";
 	private static final String DELETE_ALUMNO = "DELETE FROM ALUMNOS WHERE CODIGOALUMNO =?";
 
@@ -23,7 +23,7 @@ public class SQLAlumnoDAO implements AlumnoDAO {
 			PreparedStatement stmt = DBConnection.getInstance().getConnection().prepareStatement(SELECT_ALUMNOS);
 			ResultSet rs = stmt.executeQuery();
 			while (rs.next()) {
-				Alumno a = new Alumno(rs.getInt("CODIGOALUMNO"), rs.getString("NOMBRE"), rs.getString("APELLIDOS"),
+				Alumno a = new Alumno(rs.getString("CODIGOALUMNO"), rs.getString("NOMBRE"), rs.getString("APELLIDOS"),
 						rs.getString("TELEFONO"), rs.getString("FECHANACIMIENTO"));
 				alumnos.add(a);
 			}
@@ -51,7 +51,7 @@ public class SQLAlumnoDAO implements AlumnoDAO {
 		return add;
 	}
 
-	public int modificarAlumno(Alumno a, int codigo) {
+	public int modificarAlumno(Alumno a, String codigo) {
 		int rows = 0;
 		try {
 			PreparedStatement stmt = DBConnection.getInstance().getConnection().prepareStatement(UPDATE_ALUMNO);
@@ -60,7 +60,7 @@ public class SQLAlumnoDAO implements AlumnoDAO {
 			stmt.setString(2, a.getApellidos());
 			stmt.setString(3, a.getTelefono());
 			stmt.setString(4, a.getFechaNacimiento());
-			stmt.setInt(5, codigo);
+			stmt.setString(5, codigo);
 			rows = stmt.executeUpdate();
 
 		} catch (SQLException e) {
@@ -69,11 +69,11 @@ public class SQLAlumnoDAO implements AlumnoDAO {
 		return rows;
 	}
 
-	public boolean deleteAlumno(int cod) {
+	public boolean deleteAlumno(String cod) {
 		boolean deleted = false;
 		try {
 			PreparedStatement stmt = DBConnection.getInstance().getConnection().prepareStatement(DELETE_ALUMNO);
-			stmt.setInt(1, cod);
+			stmt.setString(1, cod);
 			deleted = stmt.execute();
 
 		} catch (SQLException e) {
@@ -81,4 +81,5 @@ public class SQLAlumnoDAO implements AlumnoDAO {
 		}
 		return deleted;
 	}
+
 }

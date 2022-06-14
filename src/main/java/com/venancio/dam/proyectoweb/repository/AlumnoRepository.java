@@ -9,12 +9,12 @@ import com.venancio.dam.proyectoweb.model.Alumno;
 public class AlumnoRepository {
 
 	private AlumnoDAO dao;
-	
+
 	private static AlumnoRepository instance;
-	
+
 	public static synchronized AlumnoRepository getInstance() {
-		if (instance ==null) {
-			instance = new AlumnoRepository ();
+		if (instance == null) {
+			instance = new AlumnoRepository();
 		}
 		return instance;
 	}
@@ -31,11 +31,11 @@ public class AlumnoRepository {
 		return this.dao.addAlumno(a);
 	}
 
-	public int updateAlumno(int cod, Alumno a) {
+	public int updateAlumno(String cod, Alumno a) {
 		return dao.modificarAlumno(a, cod);
 	}
 
-	public boolean deleteAlumno(int cod) {
+	public boolean deleteAlumno(String cod) {
 		return dao.deleteAlumno(cod);
 	
 	}

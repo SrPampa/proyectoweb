@@ -8,5 +8,5 @@ public interface EvaluacionDAO {
 
 	public Set<Evaluacion> mostrarNotas();
 
-	public Set<Evaluacion> mostrarNotasAlumno(int codigo);
+	public Set<Evaluacion> mostrarNotasAlumno(String codigo);
 }

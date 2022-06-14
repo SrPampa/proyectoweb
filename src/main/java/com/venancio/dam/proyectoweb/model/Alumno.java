@@ -5,17 +5,24 @@ import java.util.Objects;
 
 public class Alumno {
 
-	private long codigoAlumno;
+	private String codigoAlumno;
 	private String nombre;
 	private String apellidos;
 	private String telefono;
 	private String fechaNacimiento;
 
-	public Alumno(long codigoAlumno) {
+	public Alumno(String codigoAlumno) {
 		this.codigoAlumno = codigoAlumno;
 	}
 
-	public Alumno(long codigoAlumno, String nombre, String apellidos, String telefono, String fechaNacimiento) {
+	public Alumno(String nombre, String apellidos, String telefono, String fechaNacimiento) {
+	
+		this.nombre = nombre;
+		this.apellidos = apellidos;
+		this.telefono = telefono;
+		this.fechaNacimiento = fechaNacimiento;
+	}
+	public Alumno(String codigoAlumno, String nombre, String apellidos, String telefono, String fechaNacimiento) {
 		this.codigoAlumno = codigoAlumno;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
@@ -23,11 +30,11 @@ public class Alumno {
 		this.fechaNacimiento = fechaNacimiento;
 	}
 
-	public long getCodigoAlumno() {
+	public String getCodigoAlumno() {
 		return codigoAlumno;
 	}
 
-	public void setCodigoAlumno(long codigoAlumno) {
+	public void setCodigoAlumno(String codigoAlumno) {
 		this.codigoAlumno = codigoAlumno;
 	}
 

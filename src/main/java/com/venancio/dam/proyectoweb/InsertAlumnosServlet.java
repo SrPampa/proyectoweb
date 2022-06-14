@@ -44,9 +44,8 @@ public class InsertAlumnosServlet extends GenericServlet {
 		Service service = new Service();
 
 		String uniqueID = UUID.randomUUID().toString();
-		long id = Integer.valueOf(uniqueID);
 
-		Alumno a = new Alumno(id);
+		Alumno a = new Alumno(uniqueID);
 
 		if (request.getParameter("nombre") != null) {
 			a.setNombre(request.getParameter("nombre"));

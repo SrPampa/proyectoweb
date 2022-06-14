@@ -24,7 +24,7 @@ public class Service {
 		return CursoRepository.getInstance().getCursos();
 	}
 
-	public Set<Evaluacion> mostrarNotasDeAlumno(int codigo) {
+	public Set<Evaluacion> mostrarNotasDeAlumno(String codigo) {
 		return EvaluacionRepository.getInstance().mostrarNotasDeAlumno(codigo);
 	}
 
@@ -32,12 +32,12 @@ public class Service {
 		return AlumnoRepository.getInstance().addAlumno(a);
 	}
 
-	public int updateAlumno(int cod, Alumno a) {
+	public int updateAlumno(String cod, Alumno a) {
 		return AlumnoRepository.getInstance().updateAlumno(cod, a);
 
 	}
 	
-	public boolean deleteAlumno (int cod) {
+	public boolean deleteAlumno (String cod) {
 		return AlumnoRepository.getInstance().deleteAlumno(cod);
 	}
 }

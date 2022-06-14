@@ -17,6 +17,8 @@ public class Init {
 			System.out.println(alumno);
 		}
 		
+		Alumno a = new Alumno("Ruth", "a", "f", "2022/10/08");
+		service.addAlumno(a);
 		DBConnection.getInstance().destroyConnection();
 	}
 }

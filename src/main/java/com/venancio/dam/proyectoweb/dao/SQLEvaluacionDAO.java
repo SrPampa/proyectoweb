@@ -38,13 +38,13 @@ public class SQLEvaluacionDAO implements EvaluacionDAO {
 		return notas;
 	}
 
-	public Set<Evaluacion> mostrarNotasAlumno(int codigo) {
+	public Set<Evaluacion> mostrarNotasAlumno(String codigo) {
 
 		Set<Evaluacion> notas = new HashSet<>();
 
 		try {
 			PreparedStatement stmt = DBConnection.getInstance().getConnection().prepareStatement(SELECT_NOTAS_ALUMNO);
-			stmt.setLong(1, codigo);
+			stmt.setString(1, codigo);
 			ResultSet rs = stmt.executeQuery();
 
 			while (rs.next()) {
@@ -58,5 +58,7 @@ public class SQLEvaluacionDAO implements EvaluacionDAO {
 		}
 
 		return notas;
+	}
+
 	}
 }

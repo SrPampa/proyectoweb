@@ -27,7 +27,7 @@ public class EvaluacionRepository {
 		return dao.mostrarNotas();
 	}
 
-	public Set<Evaluacion> mostrarNotasDeAlumno(int codigo) {
+	public Set<Evaluacion> mostrarNotasDeAlumno(String codigo) {
 		return dao.mostrarNotasAlumno(codigo);
 	}
 }

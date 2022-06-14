@@ -10,7 +10,7 @@ public interface AlumnoDAO {
 
 	public boolean addAlumno(Alumno a);
 
-	public int modificarAlumno(Alumno a, int codigo);
+	public int modificarAlumno(Alumno a, String codigo);
 
-	public boolean deleteAlumno(int cod);
+	public boolean deleteAlumno(String cod);
 }

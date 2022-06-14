@@ -37,7 +37,7 @@ public class MostrarAlumnosServlet extends GenericServlet{
 		ctx.setVariable("alumnos", allAlumnos);
 
 		TemplateEngine engine = configThymeleaf.getTemplateEngine();
-		engine.process("mostrar", ctx, response.getWriter());
+		engine.process("alumnos", ctx, response.getWriter());
 	}
 
 	
