@@ -17,10 +17,8 @@ public class SQLFactoryDAO extends FactoryDAO {
 	private final String RUTA = "Ficheros/";
 	private final String DELIMITER = "@";
 
-
 	private String DRIVER;
 	private String URL;
-
 	private String IP;
 	private String PORT;
 	private String BDNAME;
