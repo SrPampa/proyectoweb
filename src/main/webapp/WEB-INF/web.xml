@@ -4,40 +4,70 @@
 	xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	id="WebApp_ID" version="3.0">
-		
 	<servlet>
-        <servlet-name>IndexServlet</servlet-name>
-        <servlet-class>com.venancio.dam.proyectoweb.IndexServlet</servlet-class>
-    </servlet>
-  
+		<servlet-name>IndexServlet</servlet-name>
+		<servlet-class>com.venancio.dam.proyectoweb.IndexServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>MostrarAlumnosServlet</servlet-name>
+		<servlet-class>com.venancio.dam.proyectoweb.MostrarAlumnosServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>MostrarCursosServlet</servlet-name>
+		<servlet-class>com.venancio.dam.proyectoweb.MostrarCursosServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>MostrarEvaluacionesServlet</servlet-name>
+		<servlet-class>com.venancio.dam.proyectoweb.MostrarEvaluacionesServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UpdateAlumnosServlet</servlet-name>
+		<servlet-class>com.venancio.dam.proyectoweb.UpdateAlumnosServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DeleteAlumnosServlet</servlet-name>
+		<servlet-class>com.venancio.dam.proyectoweb.DeleteAlumnosServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>InsertAlumnosServlet</servlet-name>
+		<servlet-class>com.venancio.dam.proyectoweb.InsertAlumnosServlet
+		</servlet-class>
+	</servlet>
 
-    <servlet-mapping>
-        <servlet-name>IndexServlet</servlet-name>
-        <url-pattern>/</url-pattern>
-    </servlet-mapping>   
-     <servlet-mapping>
-        <servlet-name>MostrarAlumnosServlet</servlet-name>
-        <url-pattern>/alumnos</url-pattern>
-    </servlet-mapping>
-     <servlet-mapping>
-        <servlet-name>MostrarCursosServlet</servlet-name>
-        <url-pattern>/mostrar_cursos</url-pattern>
-    </servlet-mapping>
-     <servlet-mapping>
-        <servlet-name>MostrarEvaluacionesServlet</servlet-name>
-        <url-pattern>/mostrar_evaluaciones</url-pattern>
-    </servlet-mapping>
-     <servlet-mapping>
-        <servlet-name>InsertAlumnosServlet</servlet-name>
-        <url-pattern>/apuntate</url-pattern>
-    </servlet-mapping>
-     <servlet-mapping>
-        <servlet-name>UpdateAlumnosServlet</servlet-name>
-        <url-pattern>/modificar_alumnos</url-pattern>
-    </servlet-mapping>
 
-	
-	
+	<servlet-mapping>
+		<servlet-name>IndexServlet</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MostrarAlumnosServlet</servlet-name>
+		<url-pattern>/alumnos</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MostrarCursosServlet</servlet-name>
+		<url-pattern>/curso</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MostrarEvaluacionesServlet</servlet-name>
+		<url-pattern>/mostrar_evaluaciones</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>InsertAlumnosServlet</servlet-name>
+		<url-pattern>/apuntate</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateAlumnosServlet</servlet-name>
+		<url-pattern>/modificar_alumnos</url-pattern>
+	</servlet-mapping>
+
+
+
 	<servlet-mapping>
 		<servlet-name>default </servlet-name>
 		<url-pattern>*.css</url-pattern>
@@ -55,5 +85,4 @@
 		<url-pattern>*.jpg</url-pattern>
 	</servlet-mapping>
 	
-
 </web-app>

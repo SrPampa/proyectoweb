@@ -1,0 +1,52 @@
+.container{
+    width: 70%;
+    padding: 5em;
+}
+
+body{
+    background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
+}
+
+.container{
+    margin-top: 1em;
+    background-color: ;
+}
+
+.card{
+    width: 80%;
+    margin-top: 10%;
+    display: flex;
+    padding: 2em;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 19px;
+    flex-direction: row;
+}
+
+.list-group {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+}
+
+.list-group li{
+    flex: 1 2 150px;
+    margin: 0.5em;
+    width: 90%;
+    border:none;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 5px #cccccc ;
+}
+.list-group li:hover{
+    background-color: #f1f1f1;
+    box-shadow: 5px 5px 15px 5px #cccccc ;
+}
+
+.card h4{
+    color: #b9b9b9;
+    margin-left: 1em;
+}
+
+.card h2{
+    margin-bottom: 0.7em;
+}

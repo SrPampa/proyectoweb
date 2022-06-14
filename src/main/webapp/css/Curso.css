@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+body{
+    background-image: url(../green2.jpg);
+    background-size: 150%;
+}
+.principal{
+    height: 95vh;
+    background-color: darkgreen;
+}
+
+.cursos-card{
+    background-color: green;
+    display: inline-flex;
+}
+
+.cursos-card div:first-of-type{
+    float: left;
+}
+
+.grid { 
+    display: grid;
+    padding: 3em;
+    grid-gap: 2em;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(20em, auto));
+}
+
+div > div {
+  padding: 10px;
+  
+}
+
+h1{
+    text-align: center;
+    padding: 1em;
+    font-weight: bolder;
+    color: white;
+}
+
+h3{
+    text-align: center;
+   color: white;
+}
+
+.grid  .clases{
+    height: 10em;
+    width: 100%;
+    border: solid 1px white;
+    border-radius: 5px;
+}
+
+h5:hover{
+color: rgb(123, 125, 125);
+}
+
+.card-text:hover{
+    color: rgb(123, 125, 125);
+
+
+}

@@ -28,6 +28,7 @@ private static final long serialVersionUID = 1L;
 			throws ServletException, IOException {
   
     	super.doGet(request, response);
+    	
 
 		WebContext ctx = new WebContext(request, response, servletContext, request.getLocale());
 
@@ -37,7 +38,7 @@ private static final long serialVersionUID = 1L;
 		ctx.setVariable("cursos", allCursos);
 
 		TemplateEngine engine = configThymeleaf.getTemplateEngine();
-		engine.process("mostrar_cursos", ctx, response.getWriter());
+		engine.process("curso", ctx, response.getWriter());
 	}
 
 }
