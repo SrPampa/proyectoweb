@@ -2,7 +2,8 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 
 body{
-    background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+    background-image: url(../green2.jpg);
+    background-size: 150%;
 }
 .principal{
     height: 95vh;
@@ -28,14 +29,12 @@ body{
 
 div > div {
   padding: 10px;
-  background-color: #ccc;
   
 }
 
 h1{
     text-align: center;
     padding: 1em;
-    font-family: 'Playfair display';
     font-weight: bolder;
     color: white;
 }
@@ -45,11 +44,19 @@ h3{
    color: white;
 }
 
-.tarjeta{
-    height: 30vh;
-    width: 25%;
-    border: solid 1px black;
-    padding: 2em;
-    margin: 3em;
-    border-radius: 10px;
+.grid  .clases{
+    height: 10em;
+    width: 100%;
+    border: solid 1px white;
+    border-radius: 5px;
+}
+
+h5:hover{
+color: rgb(123, 125, 125);
+}
+
+.card-text:hover{
+    color: rgb(123, 125, 125);
+
+
 }
