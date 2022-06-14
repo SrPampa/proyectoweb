@@ -20,19 +20,19 @@ public class UpdateAlumnosServlet extends GenericServlet {
 	private static final long serialVersionUID = 1L;
 
 	@Override
-	    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-	            throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
-	    	super.doGet(request, response);
-	            
-	        WebContext ctx = new WebContext(request, response, servletContext, request.getLocale());
-	        
-	        ctx.setVariable("today", LocalDate.now());
-	    
-	        TemplateEngine engine = configThymeleaf.getTemplateEngine();
+		super.doGet(request, response);
+
+		WebContext ctx = new WebContext(request, response, servletContext, request.getLocale());
+
+		ctx.setVariable("today", LocalDate.now());
+
+		TemplateEngine engine = configThymeleaf.getTemplateEngine();
 //	        engine.process("home", ctx, response.getWriter());
-	        engine.process("modificar_alumnos", ctx, response.getWriter());
-	    }
+		engine.process("apuntate", ctx, response.getWriter());
+	}
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -67,7 +67,8 @@ public class UpdateAlumnosServlet extends GenericServlet {
 
 		service.updateAlumno(id, a);
 
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/mostrar_alumnos");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/alumnos");
+		dispatcher.forward(request, response);
 
 	}
 }

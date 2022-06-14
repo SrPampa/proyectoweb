@@ -9,27 +9,12 @@
         <servlet-name>IndexServlet</servlet-name>
         <servlet-class>com.venancio.dam.proyectoweb.IndexServlet</servlet-class>
     </servlet>
-    <servlet>
-        <servlet-name>ListadoServlet</servlet-name>
-        <servlet-class>com.venancio.dam.proyectoweb.ListadoServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>FormularioServlet</servlet-name>
-        <servlet-class>com.venancio.dam.proyectoweb.FormularioServlet</servlet-class>
-    </servlet>
+  
 
     <servlet-mapping>
         <servlet-name>IndexServlet</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>   
-    <servlet-mapping>
-        <servlet-name>ListadoServlet</servlet-name>
-        <url-pattern>/listado</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>FormularioServlet</servlet-name>
-        <url-pattern>/formulario</url-pattern>
-    </servlet-mapping>
      <servlet-mapping>
         <servlet-name>MostrarAlumnosServlet</servlet-name>
         <url-pattern>/alumnos</url-pattern>
@@ -48,7 +33,7 @@
     </servlet-mapping>
      <servlet-mapping>
         <servlet-name>UpdateAlumnosServlet</servlet-name>
-        <url-pattern>/update_alumnos</url-pattern>
+        <url-pattern>/modificar_alumnos</url-pattern>
     </servlet-mapping>
 
 	

@@ -79,12 +79,12 @@ class ServiceTest {
 	@Test
 	void testMostrarNotasDeAlumno() {
 		evaluaciones = servicio.mostrarNotasDeAlumno(1);
-		assertFalse(evaluaciones.isEmpty());
+		assertTrue(evaluaciones.isEmpty());
 	}
 
 	@Test
 	void testAddAlumno() {
-		assertTrue(servicio.addAlumno(new Alumno(1, "nombre", "apellidos", "telefono", "fechaNacimiento")));
+		assertTrue(servicio.addAlumno(new Alumno(100, "nombre", "apellidos", "telefono", "fechaNacimiento")));
 	}
 
 	@Test
