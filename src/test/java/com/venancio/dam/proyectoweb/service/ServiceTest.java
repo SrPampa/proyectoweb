@@ -21,9 +21,11 @@ class ServiceTest {
 	private static Set<Evaluacion> evaluaciones = null;
 	private static Set<Alumno> alumnos = null;
 	private static Set<Curso> cursos = null;
-	
+	private static Service servicio = new Service();
+
 	@BeforeAll
 	static void setUpBeforeClass() {
+
 		evaluaciones = new HashSet<>();
 		alumnos = new HashSet<>();
 		cursos = new HashSet<>();
@@ -38,18 +40,17 @@ class ServiceTest {
 
 	@BeforeEach
 	void setUp() {
-		
-		Evaluacion evaluacion = new Evaluacion("nombreAlumno", "apellidosAlumno", "nombreCurso", 5,
-				 "observaciones");
+
+		Evaluacion evaluacion = new Evaluacion("nombreAlumno", "apellidosAlumno", "nombreCurso", 5, "observaciones");
 		evaluaciones.add(evaluacion);
-		
-		Alumno alumno = new Alumno(1, "nombre",  "apellidos", "telefono",  "fechaNacimiento");
+
+		Alumno alumno = new Alumno(1, "nombre", "apellidos", "telefono", "fechaNacimiento");
 		alumnos.add(alumno);
-	
+
 		Curso curso = new Curso(1, "curso", Date.valueOf("2000-01-01"), Date.valueOf("2000-01-01"), "horaInicio",
-		 "horaFin");
+				"horaFin");
 		cursos.add(curso);
-		
+
 	}
 
 //	@AfterEach
@@ -59,37 +60,42 @@ class ServiceTest {
 
 	@Test
 	void testMostrarNotas() {
-		
+		evaluaciones = servicio.mostrarNotas();
+		assertFalse(evaluaciones.isEmpty());
 	}
 
 	@Test
 	void testGetAlumnos() {
-		fail("Not yet implemented");
+		alumnos = servicio.getAlumnos();
+		assertTrue(!alumnos.isEmpty());
 	}
 
 	@Test
 	void testGetCursos() {
-		fail("Not yet implemented");
+		cursos = servicio.getCursos();
+		assertFalse(cursos.isEmpty());
 	}
 
 	@Test
 	void testMostrarNotasDeAlumno() {
-		fail("Not yet implemented");
+		evaluaciones = servicio.mostrarNotasDeAlumno(1);
+		assertFalse(evaluaciones.isEmpty());
 	}
 
 	@Test
 	void testAddAlumno() {
-		fail("Not yet implemented");
+		assertTrue(servicio.addAlumno(new Alumno(1, "nombre", "apellidos", "telefono", "fechaNacimiento")));
 	}
 
 	@Test
 	void testUpdateAlumno() {
-		fail("Not yet implemented");
+		int recibido = servicio.updateAlumno(1, new Alumno(1, "nombre", "apellidos", "telefono", "fechaNacimiento"));
+		assertEquals(recibido, 1);
 	}
 
 	@Test
 	void testDeleteAlumno() {
-		fail("Not yet implemented");
+		assertTrue(servicio.deleteAlumno(1)); 
 	}
 
 }
