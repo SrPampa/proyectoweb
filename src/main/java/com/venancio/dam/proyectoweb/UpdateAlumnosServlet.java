@@ -45,9 +45,8 @@ public class UpdateAlumnosServlet extends GenericServlet {
 		Service service = new Service();
 
 		String uniqueID = UUID.randomUUID().toString();
-		int id = Integer.valueOf(uniqueID);
-
-		Alumno a = new Alumno(id);
+		
+		Alumno a = new Alumno(uniqueID);
 
 		if (request.getParameter("nombre") != null) {
 			a.setNombre(request.getParameter("nombre"));
@@ -65,7 +64,7 @@ public class UpdateAlumnosServlet extends GenericServlet {
 			a.setFechaNacimiento(request.getParameter("fechaNacimiento"));
 		}
 
-		service.updateAlumno(id, a);
+		service.updateAlumno(uniqueID, a);
 
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/alumnos");
 		dispatcher.forward(request, response);

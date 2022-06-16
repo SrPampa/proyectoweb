@@ -30,7 +30,7 @@ public class DBConnection {
 	private DBConnection() {
 		System.out.println("Creando conexión con la BBDD...");
 		SQLFactoryDAO fdao = new SQLFactoryDAO();
-		fdao.fillConfig();
+		// fdao.fillConfig();
 		try {
 			Class.forName(fdao.getDriver());
 		} catch (ClassNotFoundException e1) {

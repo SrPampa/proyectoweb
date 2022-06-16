@@ -44,7 +44,7 @@ class ServiceTest {
 		Evaluacion evaluacion = new Evaluacion("nombreAlumno", "apellidosAlumno", "nombreCurso", 5, "observaciones");
 		evaluaciones.add(evaluacion);
 
-		Alumno alumno = new Alumno(1, "nombre", "apellidos", "telefono", "fechaNacimiento");
+		Alumno alumno = new Alumno("1", "nombre", "apellidos", "telefono", "fechaNacimiento");
 		alumnos.add(alumno);
 
 		Curso curso = new Curso(1, "curso", Date.valueOf("2000-01-01"), Date.valueOf("2000-01-01"), "horaInicio",
@@ -78,24 +78,24 @@ class ServiceTest {
 
 	@Test
 	void testMostrarNotasDeAlumno() {
-		evaluaciones = servicio.mostrarNotasDeAlumno(1);
+		evaluaciones = servicio.mostrarNotasDeAlumno("1");
 		assertTrue(evaluaciones.isEmpty());
 	}
 
 	@Test
 	void testAddAlumno() {
-		assertTrue(servicio.addAlumno(new Alumno(100, "nombre", "apellidos", "telefono", "fechaNacimiento")));
+		assertTrue(servicio.addAlumno(new Alumno("100", "nombre", "apellidos", "telefono", "fechaNacimiento")));
 	}
 
 	@Test
 	void testUpdateAlumno() {
-		int recibido = servicio.updateAlumno(1, new Alumno(1, "nombre", "apellidos", "telefono", "fechaNacimiento"));
-		assertEquals(recibido, 1);
+		int recibido = servicio.updateAlumno("1", new Alumno("1", "nombre", "apellidos", "telefono", "fechaNacimiento"));
+		assertEquals(recibido, "1");
 	}
 
 	@Test
 	void testDeleteAlumno() {
-		assertTrue(servicio.deleteAlumno(1)); 
+		assertTrue(servicio.deleteAlumno("1")); 
 	}
 
 }

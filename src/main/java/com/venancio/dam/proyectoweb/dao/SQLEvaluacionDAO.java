@@ -60,5 +60,4 @@ public class SQLEvaluacionDAO implements EvaluacionDAO {
 		return notas;
 	}
 
-	}
 }
