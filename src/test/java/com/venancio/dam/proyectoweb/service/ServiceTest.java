@@ -44,7 +44,7 @@ class ServiceTest {
 		Evaluacion evaluacion = new Evaluacion("nombreAlumno", "apellidosAlumno", "nombreCurso", 5, "observaciones");
 		evaluaciones.add(evaluacion);
 
-		Alumno alumno = new Alumno("1", "nombre", "apellidos", "telefono", "fechaNacimiento");
+		Alumno alumno = new Alumno("1", "nombre", "apellidos", "telefono", "2022/04/08");
 		alumnos.add(alumno);
 
 		Curso curso = new Curso(1, "curso", Date.valueOf("2000-01-01"), Date.valueOf("2000-01-01"), "horaInicio",
@@ -84,13 +84,13 @@ class ServiceTest {
 
 	@Test
 	void testAddAlumno() {
-		assertTrue(servicio.addAlumno(new Alumno("100", "nombre", "apellidos", "telefono", "fechaNacimiento")));
+		assertTrue(servicio.addAlumno(new Alumno("100", "nombre", "apellidos", "telefono", "2022/04/08")));
 	}
 
 	@Test
 	void testUpdateAlumno() {
-		int recibido = servicio.updateAlumno("1", new Alumno("1", "nombre", "apellidos", "telefono", "fechaNacimiento"));
-		assertEquals(recibido, "1");
+		int recibido = servicio.updateAlumno("1", new Alumno("1", "nombre", "apellidos", "telefono", "2022/04/08"));
+		assertEquals("1", recibido);
 	}
 
 	@Test

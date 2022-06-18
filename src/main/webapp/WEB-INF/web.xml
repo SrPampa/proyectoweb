@@ -15,11 +15,6 @@
 		</servlet-class>
 	</servlet>
 	<servlet>
-		<servlet-name>MostrarAlumnosNotasServlet</servlet-name>
-		<servlet-class>com.venancio.dam.proyectoweb.MostrarAlumnosNotasServlet
-		</servlet-class>
-	</servlet>
-	<servlet>
 		<servlet-name>MostrarCursosServlet</servlet-name>
 		<servlet-class>com.venancio.dam.proyectoweb.MostrarCursosServlet
 		</servlet-class>
@@ -50,10 +45,7 @@
 		<servlet-name>IndexServlet</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>MostrarAlumnosNotasServlet</servlet-name>
-		<url-pattern>/mostrar</url-pattern>
-	</servlet-mapping>
+
 	<servlet-mapping>
 		<servlet-name>MostrarAlumnosServlet</servlet-name>
 		<url-pattern>/alumnos</url-pattern>
